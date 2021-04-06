@@ -1,0 +1,95 @@
+
+#content{
+    
+    background-color: rgb(54, 49, 49);
+}
+
+.banner{
+    padding: 20px;
+    background-color: teal;
+    color: wheat;
+    
+    
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+.imagebox{
+    
+    margin: 2ch;
+    position: relative;
+    width :200px;
+    background-color: white;
+
+    
+}
+
+
+.fitwidth{
+    width: 100%;
+}
+
+.img_label{
+    position:absolute;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem;
+    color: white;
+    background-color: rgb(204, 5, 121);
+}
+
+.img_label:hover{
+    background-color:rgb(136, 10, 84);
+}
+.img_label:active{
+    background-color: rgb(246, 117, 192);
+}
+
+.gallery{
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.top{
+    position:absolute;
+    top: 0px;
+}
+
+.divframe{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.zoom{
+    width: 300px;
+}
+
+.std_button{
+    padding: 1em;
+    color: white;
+    background-color: rgb(251, 73, 29);
+    border-style: none;
+}
+
+.std_button:hover{
+    background-color: teal;
+}
+
+.std_button:focus{
+    border-style: none;
+    background-color: violet;
+}
