@@ -1,4 +1,12 @@
 
+*{
+    -webkit-appearance: none;
+    outline: none;
+}
+:active{
+    outline: none;
+}
+
 #content{
     
     background-color: rgb(54, 49, 49);
@@ -92,4 +100,33 @@ h1{
 .std_button:focus{
     border-style: none;
     background-color: violet;
+}
+
+*:active, *:focus *:visited{
+    outline: none;
+}
+
+.fillme{
+    width: 200px;
+    height: 500px;
+}
+
+textarea{
+    resize: none;
+}
+
+input[type=file]{
+    background-color: azure;
+    font-family: cursive;
+    color: brown;
+}
+
+form{
+    margin-top: 3ch;
+    background-color: burlywood;
+}
+
+.empty{
+    text-decoration: none;
+    color: crimson;
 }
