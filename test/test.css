@@ -1,9 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 *{
+    -webkit-appearance: none;
     outline: none;
-    box-sizing: border-box;
+}
+:active{
+    outline: none;
 }
 
 #content{
@@ -12,22 +13,15 @@
 }
 
 .banner{
-    
-    display: flex;
     padding: 20px;
-    background-color: rgb(61, 9, 57);
-    color: rgb(255, 255, 255);
+    background-color: teal;
+    color: wheat;
     
     
 }
 
 h1{
-    font-family: Raleway;
-}
-
-.logo{
-    margin-right: 2ch;
-    width: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -39,7 +33,7 @@ h1{
     margin: 2ch;
     position: relative;
     width :200px;
-    background-color: rgb(54, 4, 33);
+    background-color: white;
 
     
 }
@@ -52,12 +46,12 @@ h1{
 .img_label{
     position:absolute;
     width: 100%;
-    
+    bottom: 0px;
     display: flex;
     justify-content: center;
     padding: 0.3rem;
     color: white;
-    background-color: rgb(77, 15, 50);
+    background-color: rgb(204, 5, 121);
 }
 
 .img_label:hover{
@@ -93,7 +87,6 @@ h1{
 }
 
 .std_button{
-    -webkit-appearance: none;
     padding: 1em;
     color: white;
     background-color: rgb(251, 73, 29);
@@ -105,7 +98,35 @@ h1{
 }
 
 .std_button:focus{
-    outline: none;
     border-style: none;
     background-color: violet;
+}
+
+*:active, *:focus *:visited{
+    outline: none;
+}
+
+.fillme{
+    width: 200px;
+    height: 500px;
+}
+
+textarea{
+    resize: none;
+}
+
+input[type=file]{
+    background-color: azure;
+    font-family: cursive;
+    color: brown;
+}
+
+form{
+    margin-top: 3ch;
+    background-color: burlywood;
+}
+
+.empty{
+    text-decoration: none;
+    color: crimson;
 }
