@@ -21,7 +21,10 @@
 
         <div class="content">
             <div class="banner">
-                <h1 class="random">Well Hello There</h1>
+                <img src="../images/yuki.jpg" class="logo"/>
+                <h1 class="random">Well Hello There
+                   
+                </h1>
             </div>
 
             
@@ -29,6 +32,11 @@
             <script>
                 $(document).ready(function () {
                     console.log('welcome JQuery');
+
+                    let me = "<p>84<p>";
+
+                    var html = `<strong>${escape(me)}</strong>`
+                    console.log(html);
                 })
             </script>
 
@@ -38,29 +46,31 @@
 
             <div class="gallery">
                 <div class="imagebox">
-                    <img src="../images/yuki.jpg" class="fitwidth"/>
+                    <img src="../images/yuki2.jpg" class="fitwidth"/>
                     <div class="img_label">
                         Heya
                     </div>
                 </div>
-
                 <div class="imagebox">
                     <img src="../images/yuki2.jpg" class="fitwidth"/>
+                    <div class="img_label">
+                        Heya
+                    </div>
+                </div>
+                <div class="imagebox">
+                    <img src="../images/yuki.jpg" class="fitwidth"/>
                     <div class="divframe"></div>
                     <p class="top">Hello Image</p>
                     <div class="img_label">
                         Heya
                     </div>
                 </div>
-                <div class="imagebox">
-                    <img src="../images/yuki.jpg" class="fitwidth"/>
-                    <div class="img_label">
-                        Heya
-                    </div>
-                </div>
+
+                
+                
 
                 <div class="imagebox">
-                    <img src="../images/yuki2.jpg" class="fitwidth"/>
+                    <img src="../images/yuki.jpg" class="fitwidth"/>
                     <div class="divframe"></div>
                     <p class="top">Hello Image</p>
                     <div class="img_label">
