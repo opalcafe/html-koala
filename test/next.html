@@ -5,8 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        p{
+            padding: 0px;
+            margin: 0px;
+        }
+
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>
+
+    <script type="module" defer>
+        import firebase from 'https://cdn.skypack.dev/@firebase/app'
+        import 'https://cdn.skypack.dev/@firebase/database'
+        import 'https://cdn.skypack.dev/@firebase/auth'
+        import 'https://cdn.skypack.dev/@firebase/firestore'
+
+        var firebaseConfig = {
+  apiKey: "AIzaSyAERHWWdHxfxhxjHuHTLMyx3NjfKgqBl_M",
+  authDomain: "html-koala.firebaseapp.com",
+  databaseURL: "https://html-koala-default-rtdb.firebaseio.com",
+  projectId: "html-koala",
+  storageBucket: "html-koala.appspot.com",
+  messagingSenderId: "582965712698",
+  appId: "1:582965712698:web:e9634728115eb5bf6ae203",
+  measurementId: "G-NEMHQXKJ17"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
+
+
+        const email = "app.phoenixshell@gmail.com";
+        const password = "Boulos#187";
+
+        firebase.auth().signInWithEmailAndPassword(email, password).
+        then((userCred)=>{
+        
+            //firebase.database().ref("hAbchukNiwQd5dBuvo4pwoniPDG3/solidstate/__calls").set(null);
+            
+            firebase.database().ref("hAbchukNiwQd5dBuvo4pwoniPDG3/solidstate/__calls")
+            .on("child_added", (snap) =>{
+                const time = snap.child("millis").val();
+                //console.log(snap.child("millis").val());
+                $("#content").append(`<p>${time}</p>`);
+            })
+            
+
+
+
+
+        });
+
+
+
+    </script>
+
+
+    
 </head>
 <body>
-    <div>Next Page</div>
+    <div id="content"></div>
 </body>
 </html>

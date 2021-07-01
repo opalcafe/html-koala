@@ -10,13 +10,52 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script>
 
 	  	<link rel="stylesheet" type="text/css" href="index.css">
-		<script type="text/javascript" src="index.js" defer></script>
+		<script type="module" src="mymode.js"></script>
+		<script type="module" src="scripts/MyApi.js"></script>
+
+		<script type="module">
+			import {MyApi, TestStatic} from "./scripts/MyApi.js";
+			import {FireApi} from "./scripts/FireApi.js";
+			import {TestApi} from "./scripts/TestApi.js";
+			//import {single_api} from "./scripts/MyApi.js"
+
+			
+
+			MyApi.init(new TestApi());
+
+			let api = new MyApi();
+			api.hey();
+			console.log("heya:private "+api.heya);
+			//api.someimp();
+
+			MyApi.init(new FireApi());
+
+			TestStatic.initStatic();
+
+			let myStat = TestStatic.INSTANCE;
+			console.log(myStat);
+
+			let pop = TestStatic.getMe();
+			console.log(pop);
 
 
-	  	<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+
+
+
+
+
+		</script>
+	
+
+
+		<script type="module" src="index.js" defer></script>
+
+
+
+	  	<!-- The core Firebase JS SDK is always required and must be listed first
+		<scrip? src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></scrip?		<scrip src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></scrip>
+		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></scrip>
 		<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
 
 		
@@ -50,7 +89,7 @@
 
 
 
-		</script>
+		</script> -->
 
 	</head>
 		<body>

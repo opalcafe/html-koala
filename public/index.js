@@ -1,5 +1,7 @@
 
 //import {out} from  "./utility";
+import {MyMode} from "./mymode.js";
+import {MyApi} from "./scripts/MyApi.js";
 
 console.log('welcome koala');
 
@@ -149,6 +151,19 @@ wrapCar.get(val =>{
 
 
 mycontext.destory();
+
+
+
+
+
+let mode= new MyMode("hello world");
+
+mode.printMe();
+
+
+
+//let api = new MyApi();
+//pi.wow();
 
 
 
